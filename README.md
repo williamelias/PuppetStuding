@@ -19,7 +19,7 @@ Iniciar servidor puppet
     exec bash (ou restarte o bash manualmente)
     systemctl status puppet (valide sua ativação)
 
-    Configurações adicionais: https://puppet.com/docs/puppet/7/server/install_from_packages.html
+    **Configurações adicionais** : https://puppet.com/docs/puppet/7/server/install_from_packages.html
 
 Instalar puppet agent
 
@@ -27,15 +27,23 @@ Instalar puppet agent
     source /etc/profile.d/puppet-agent.sh
     export PATH=/opt/puppetlabs/bin:$PATH
 
+**Documentação** : https://puppet.com/docs/puppet/7/installing_and_upgrading.html
+
 <hr>
 
 ### Gerenciar ambientes
 
 Para a gestão de ambientes é necessário haver um repositório com o git inicializado
-Obs: Cada branch existente será considerada um ambiente puppet
+Obs: Cada branch existente será considerada um ambiente puppet e é obrigatória a existência de uma branch nomeada *production*
 
 Localização dos ambientes:  /etc/puppetlabs/code/environments
 
+Arquivos criados:
+
+- environment.conf
+- Puppetfile
+
+**Documentação** : https://puppet.com/docs/pe/2019.0/control_repo.html
 
 ### Gerenciar módulos
 
